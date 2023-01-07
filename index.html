@@ -16,7 +16,13 @@
       src="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.13.1/af-2.5.1/b-2.3.3/b-colvis-2.3.3/b-html5-2.3.3/datatables.min.js"
     ></script>
     <style>
-    
+      @media screen and (max-width: 640px) {
+        .dataTables_wrapper .dataTables_length,
+        .dataTables_wrapper .dataTables_filter {
+          float: none;
+          text-align: start;
+        }
+      }
       td {
         font-weight: 900 !important;
         font-size: 20px !important;
@@ -24,94 +30,49 @@
     </style>
   </head>
   <body>
+  <h1>Shree Bidada Patidar Sanatan Yuvakmandal(2022-2023)</h1>
     <table id="example" class="display" style="width: 100%">
       <thead>
         <tr>
+          <th>No.</th>
           <th>Name</th>
-          <th>DATE OF BIRTH</th>
+          <th>Mobile Number</th>
+          <th>Date Of Birth(YYYY-MM-DD)</th>
           <th>Age</th>
+          <th>Blood Group</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>PARASIYA SANKIT DINESHBHAI</td>
-          <td><b>06-11-2022</b></td>
-          <td id="abcd"></td>
+          <td>1</td>
+          <td>UKANI ALPESH PARSOTAM</td>
+          <td>9913523956</td>
+          <td id="s1"></td>
+          <td id="d1"></td>
+          <td></td>
         </tr>
         <tr>
-          <td>PARASIYA DINESHBHAI KARSHAN</td>
+          <td>UKANI DINESHBHAI KARSHAN</td>
           <td><b>30-03-1977</b></td>
-          <td id="abcde"></td>
+          <td id="a2"></td>
+          <td id="a2"></td>
+          <td id="a2"></td>
+          <td id="a2"></td>
+        </tr>
+        <tr>
+          <td>ZGloria Little</td>
+          <td>Systems Administrator</td>
+          <td id="a3">06-11-1999</td>
+          <td id="a3">06-11-1999</td>
+          <td id="a3">06-11-1999</td>
+          <td id="a3">06-11-1999</td>
         </tr>
         <tr>
           <td>ZGloria Little</td>
           <td>Systems Administrator</td>
           <td>06-11-1999</td>
-        </tr>
-        <tr>
-          <td>ZGloria Little</td>
-          <td>Systems Administrator</td>
-          <td>06-11-1998</td>
-        </tr>
-
-        <tr>
-          <td>ZGloria Little</td>
-          <td>Systems Administrator</td>
-          <td>23 years 3 months 0 days</td>
-        </tr>
-        <tr>
-          <td>ZGloria Little</td>
-          <td>Systems Administrator</td>
-          <td>18 years 3 months 0 days</td>
-        </tr>
-        <tr>
-          <td>ZGloria Little</td>
-          <td>Systems Administrator</td>
           <td>06-11-1999</td>
-        </tr>
-        <tr>
-          <td>ZGloria Little</td>
-          <td>Systems Administrator</td>
           <td>06-11-1999</td>
-        </tr>
-        <tr>
-          <td>ZGloria Little</td>
-          <td>Systems Administrator</td>
-          <td>06-11-1999</td>
-        </tr>
-        <tr>
-          <td>ZGloria Little</td>
-          <td>Systems Administrator</td>
-          <td>06-11-1999</td>
-        </tr>
-        <tr>
-          <td>ZGloria Little</td>
-          <td>Systems Administrator</td>
-          <td>06-11-1999</td>
-        </tr>
-        <tr>
-          <td>ZGloria Little</td>
-          <td>Systems Administrator</td>
-          <td>06-11-1999</td>
-        </tr>
-        <tr>
-          <td>ZGloria Little</td>
-          <td>Systems Administrator</td>
-          <td>06-11-1999</td>
-        </tr>
-        <tr>
-          <td>ZGloria Little</td>
-          <td>Systems Administrator</td>
-          <td>06-11-1999</td>
-        </tr>
-        <tr>
-          <td>ZGloria Little</td>
-          <td>Systems Administrator</td>
-          <td>06-11-1999</td>
-        </tr>
-        <tr>
-          <td>ZGloria Little</td>
-          <td>Systems Administrator</td>
           <td>06-11-1999</td>
         </tr>
       </tbody>
@@ -120,28 +81,28 @@
           <th>Name</th>
           <th>Start date</th>
           <th>Age</th>
+          <th>Age</th>
+          <th>Age</th>
+          <th>Age</th>
         </tr>
       </tfoot>
     </table>
-    <input type="date" />
-    <h1 id="abc"></h1>
-    <h1 id="abcd"></h1>
-    <h1 id="abcde"></h1>
-    <h4 id="leap">leapr year</h4>
-    yyy md dd
-    <!-- <button onclick="getAges()">Calculate</button> -->
-
+   
     <script>
       var dateArray = ["2000-11-06", "1977-03-30", "1972-02-29"];
+      document.getElementById("s1").innerHTML = dateArray[0];
+
       var AgeArray = [];
       function getAges() {
         dateArray.forEach((element) => {
           AgeArray.push(getAge(element));
         });
-        document.getElementById("abcd").innerHTML = AgeArray[0];
-        document.getElementById("abcde").innerHTML = AgeArray[1];
-        document.getElementById("leap").innerHTML = AgeArray[2];
+        document.getElementById("d1").innerHTML = AgeArray[0];
+        document.getElementById("d2").innerHTML = AgeArray[1];
+        document.getElementById("d3").innerHTML = AgeArray[2];
       }
+
+
 
       function getAge(dateString) {
         var today = new Date();
@@ -186,10 +147,9 @@
           if (DOB.getMonth() === today.getMonth()) months = totalMonths % 12;
           else months = (totalMonths % 12) + 1;
         }
-        var age = years + " years " + months + " months " + days + " days";
+        var age = years + " Y " + months + " M " + days + " D";
         return age;
       }
-
       getAges();
     </script>
     <script>
