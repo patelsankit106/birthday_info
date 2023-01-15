@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
+    <title>Bidada Patidar Sanatan Yuvakmandal</title>
+  <link rel="icon" href="bidadalogo.jpg">    <link
       rel="stylesheet"
       type="text/css"
       href="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.13.1/af-2.5.1/b-2.3.3/b-colvis-2.3.3/b-html5-2.3.3/datatables.min.css"
@@ -30,6 +30,7 @@
     </style>
   </head>
   <body>
+  <!-- <img src="bidadalogo.jpg" alt=""> -->
   <h1>Shree Bidada Patidar Sanatan Yuvakmandal(2022-2023)</h1>
     <table id="example" class="display" style="width: 100%">
       <thead>
@@ -43,38 +44,31 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+       <tr>
           <td>1</td>
-          <td>UKANI ALPESH PARSOTAM</td>
-          <td>9913523956</td>
+          <td>PARASIYA DINESHBHAI KARSHAN</td>
+          <td>9925640106</td>
+          <td id="s2"></td>
+          <td id="d2"></td>
+          <td>O+</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>PARASIYA SANKIT DINESHBHAI</td>
+          <td>9574540106</td>
           <td id="s1"></td>
           <td id="d1"></td>
-          <td></td>
+          <td>O-</td>
         </tr>
         <tr>
-          <td>UKANI DINESHBHAI KARSHAN</td>
-          <td><b>30-03-1977</b></td>
-          <td id="a2"></td>
-          <td id="a2"></td>
-          <td id="a2"></td>
-          <td id="a2"></td>
+          <td>3</td>
+          <td>PARASIYA DIVY DINESHBHAI</td>
+          <td>7383740106</td>
+          <td id="s3"></td>
+          <td id="d3"></td>
+          <td>O-</td>
         </tr>
-        <tr>
-          <td>ZGloria Little</td>
-          <td>Systems Administrator</td>
-          <td id="a3">06-11-1999</td>
-          <td id="a3">06-11-1999</td>
-          <td id="a3">06-11-1999</td>
-          <td id="a3">06-11-1999</td>
-        </tr>
-        <tr>
-          <td>ZGloria Little</td>
-          <td>Systems Administrator</td>
-          <td>06-11-1999</td>
-          <td>06-11-1999</td>
-          <td>06-11-1999</td>
-          <td>06-11-1999</td>
-        </tr>
+       
       </tbody>
       <tfoot>
         <tr>
@@ -89,8 +83,10 @@
     </table>
    
     <script>
-      var dateArray = ["2000-11-06", "1977-03-30", "1972-02-29"];
+      var dateArray = ["2000-11-06", "1977-03-30", "2004-07-08"];
       document.getElementById("s1").innerHTML = dateArray[0];
+      document.getElementById("s2").innerHTML = dateArray[1];
+      document.getElementById("s3").innerHTML = dateArray[2];
 
       var AgeArray = [];
       function getAges() {
